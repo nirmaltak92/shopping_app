@@ -25,13 +25,13 @@ export const getProductFailure = (error) => {
     }
 }
 
-export const filterProducts = (q, noFilteredata, filter) => {
+export const filterProducts = (qry, data, filter) => {
     return {
-        type : FILTER_PRODUCT,
-        filter: filter,
-        payload : noFilteredata,
-        query : q
-    }
+      type: FILTER_PRODUCT,
+      filter: filter,
+      payload: data,
+      query: qry,
+    };
 }
 
 //Async Action creator (for which we are using redux-thunk)

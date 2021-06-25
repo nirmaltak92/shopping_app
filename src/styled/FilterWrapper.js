@@ -11,15 +11,18 @@ background-color: #fff;
 `;
 
 export const SelectDiv = styled.div`
-display: flex;
-align-items:center;
-flex-diretion: row;
-justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
 
-*{  
+  * {
     width: 90px;
     margin: 7px;
-}
+  }
+  .Select {
+    max-height: 10px;
+  }
 `;
 
 export const BrandFilter = styled.div`

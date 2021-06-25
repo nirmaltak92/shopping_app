@@ -21,7 +21,7 @@ function ProductCardComponent(props) {
         <h1>loading...</h1>
       ) : props.products.error 
           ? ( <h1>{props.products.error}</h1> ) 
-          : props.products?.data?.products?.map((p,i)=>(
+          : props.products?.products?.map((p,i)=>(
             <ProductSection key={i}>
               <div>
               <PImage src={p.image} alt="img" width="250" height="400"/>
@@ -36,7 +36,10 @@ function ProductCardComponent(props) {
 }
 const mapStateToProps = (state) => {
   return {
-    products: state.products,
+    products:
+      state.products.filter.length !== 0 || state.products.filtering
+        ? state.products.filter
+        : state.products.data,
   };
 };
 
